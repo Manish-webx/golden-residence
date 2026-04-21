@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="The Golden Residences – Luxury 3 & 3.5 BHK Independent Floors at Sector 9, IMT Manesar by Worldwide Realty. Starting from ₹1.41 Cr. RERA Approved. Private Terrace | Smart Community | 172 Acres Township." />
+  <title>The Golden Residences | 3 & 3.5 BHK Luxury Floors – IMT Manesar</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Lightbox2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+     STICKY HEADER
+============================================================ -->
+  <header id="site-header">
+    <div class="container-fluid px-3 px-md-4">
+      <div class="header-inner">
+        <a href="#" class="site-logo">
+          <img src="TGR-Logo.png" alt="The Golden Residences Logo" class="header-logo-img" />
+        </a>
+        <nav id="desktop-nav" class="d-none d-lg-flex">
+          <a href="#highlights">Highlights</a>
+          <a href="#about">About</a>
+          <a href="#amenities">Amenities</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#floorplan">Floor Plans</a>
+          <a href="#location">Location</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div class="header-cta">
+          <a href="#final-cta" class="btn btn-gold d-none d-sm-inline-flex" id="hdr-visit"><i
+              class="fas fa-calendar-check"></i> Book Visit</a>
+          <div class="hamburger d-flex d-lg-none" id="hamburger-btn" onclick="openMobileNav()">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav-overlay" id="mobile-nav">
+    <div class="mobile-logo-wrap">
+      <img src="TGR-Logo.png" alt="The Golden Residences" />
+    </div>
+    <span class="mobile-close" onclick="closeMobileNav()"><i class="fas fa-times"></i></span>
+    <a href="#highlights" onclick="closeMobileNav()">Highlights</a>
+    <a href="#about" onclick="closeMobileNav()">About</a>
+    <a href="#amenities" onclick="closeMobileNav()">Amenities</a>
+    <a href="#gallery" onclick="closeMobileNav()">Gallery</a>
+    <a href="#floorplan" onclick="closeMobileNav()">Floor Plans</a>
+    <a href="#location" onclick="closeMobileNav()">Location</a>
+    <a href="#faq" onclick="closeMobileNav()">FAQ</a>
+    <a href="#final-cta" class="btn btn-gold" onclick="closeMobileNav()" style="margin-top:20px">Book Site Visit</a>
+  </div>
+
+  <!-- ============================================================
+     HERO SECTION
+============================================================ -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-layout">
+      <div class="container-xl px-3 px-md-4 w-100">
+        <div class="row g-4 align-items-center">
+          <!-- LEFT: Content -->
+          <div class="col-12 col-lg-7 hero-left">
+            <div class="hero-badge"><i class="fas fa-star"></i> RERA Approved · GGM/882/614/2024/109</div>
+
+            <h1 class="hero-title">The Golden<br /><em>Residences</em></h1>
+
+            <p class="hero-tagline">Fully Furnished Luxury 3 & 3.5 BHK Independent Floors<br />Starting ₹1.41 Cr · IMT
+              Manesar, Gurugram</p>
+
+            <div class="hero-btns">
+              <a href="#final-cta" class="btn btn-gold" id="hero-visit">
+                <i class="fas fa-calendar-check"></i> Book a Free Site Visit
+              </a>
+              <a href="tel:+919876543210" class="btn btn-outline" id="hero-call">
+                <i class="fas fa-phone-alt"></i> Call Now
+              </a>
+            </div>
+
+            <!-- Floating Badges -->
+            <div class="hero-pills">
+              <span class="hero-pill"><i class="fas fa-shield-alt"></i> RERA Approved</span>
+              <span class="hero-pill"><i class="fas fa-car"></i> Stilt Parking</span>
+              <span class="hero-pill"><i class="fas fa-tree"></i> 172 Acre Township</span>
+              <span class="hero-pill"><i class="fas fa-bank"></i> Axis & ICICI Loans</span>
+            </div>
+          </div>
+
+          <!-- RIGHT: Lead Form -->
+          <div class="col-12 col-lg-5 hero-right">
+            <div class="hero-lead-form">
+              <div class="form-header">
+                <div class="form-logo-wrap">
+                  <img src="TGR-Logo.png" alt="TGR" class="form-logo" />
+                </div>
+                <h3>Get Instant Price Details</h3>
+                <p>Our expert will call you within 5 minutes</p>
+              </div>
+              <form id="hero-form" onsubmit="handleFormSubmit(event, 'hero-form')">
+                <div class="form-group">
+                  <input type="text" id="hero-name" name="name" placeholder="Your Full Name" required />
+                </div>
+                <div class="form-group">
+                  <input type="tel" id="hero-phone" name="phone" placeholder="Mobile Number" pattern="[0-9]{10}"
+                    required />
+                </div>
+                <div class="form-group">
+                  <select id="hero-interest" name="interest">
+                    <option value="" disabled selected>Select Floor Type</option>
+                    <option>3 BHK – ₹1.41 Cr onwards</option>
+                    <option>3.5 BHK – ₹1.74 Cr onwards</option>
+                    <option>Site Visit Request</option>
+                    <option>Investment Inquiry</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center" id="hero-submit">
+                  <i class="fas fa-phone-alt"></i> Request a Callback
+                </button>
+              </form>
+              <div class="form-trust">
+                <span><i class="fas fa-lock"></i> 100% Secure</span>
+                <span><i class="fas fa-user-shield"></i> No Spam</span>
+                <span><i class="fas fa-clock"></i> 5 Min Response</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="hero-scroll">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     HIGHLIGHTS
+============================================================ -->
+  <section id="highlights">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Why Choose Us</span>
+        <h2 class="section-title">Crafted for the <span>Distinguished Homeowner</span></h2>
+        <div class="gold-line"></div>
+        <p class="section-sub">The Golden Residences, Sector 9 IMT Manesar — a landmark community offering fully
+          furnished independent floors in a fast-growing, well-connected location.</p>
+      </div>
+      <div class="row g-4 mt-3">
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="highlight-card reveal h-100">
+            <div class="highlight-icon"><i class="fas fa-layer-group"></i></div>
+            <h4>3 & 3.5 BHK Floors</h4>
+            <p>Spacious independent floors ranging from <strong style="color:var(--gold)">1525–1980 sq.ft</strong> — top
+              floors with private terrace, lower floors with basement</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="highlight-card reveal h-100">
+            <div class="highlight-icon"><i class="fas fa-car"></i></div>
+            <h4>Stilt Parking for Every Unit</h4>
+            <p>Dedicated covered stilt parking for each floor — no shared or pay-per-use parking. Yours, always.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="highlight-card reveal h-100">
+            <div class="highlight-icon"><i class="fas fa-swimming-pool"></i></div>
+            <h4>2.14-Acre Clubhouse</h4>
+            <p>A sprawling 2.14-acre exclusive clubhouse with top-notch lifestyle amenities for residents</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-6">
+          <div class="highlight-card reveal h-100">
+            <div class="highlight-icon"><i class="fas fa-shield-alt"></i></div>
+            <h4>24×7 Gated Security</h4>
+            <p>Round-the-clock gated security with boom barriers, CCTV, landscaped open areas &amp; 24-m wide RCC roads
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-lg-6">
+          <div class="highlight-card reveal h-100">
+            <div class="highlight-icon"><i class="fas fa-file-contract"></i></div>
+            <h4>Registry-Ready Floors</h4>
+            <p>Registry-ready titles with loan tie-ups from <strong style="color:var(--gold)">Axis &amp; ICICI
+                Bank</strong> and a flexible <strong style="color:var(--gold)">30:70 payment plan</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     ABOUT
+============================================================ -->
+  <section id="about">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-12 col-lg-6">
+          <div class="about-image-wrap reveal">
+            <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=900&q=85"
+              alt="The Golden Residences IMT Manesar" />
+            <div class="about-badge-float">
+              <div class="number">172</div>
+              <div class="label">Acres Township</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="about-text reveal">
+            <span class="section-label">About the Project</span>
+            <h2 class="section-title text-black">Refined Luxury Living <span>Redefined</span></h2>
+            <div class="gold-line"></div>
+            <p>Welcome to The Golden Residences — a premium living community located in the heart of IMT Manesar,
+              designed
+              entirely by <strong style="color:var(--gold)">Worldwide Realty</strong>. Spread across 172 acres, this
+              landmark township offers fully furnished independent floors that seamlessly blend contemporary living with
+              lush, green surroundings.</p>
+            <p>Thoughtfully crafted for families seeking space, comfort, and convenience, every floor features 3
+              bedrooms,
+              a hall, and a modern kitchen — with the exclusive option of a private terrace or basement. Modern
+              elevation,
+              premium interiors, and a smart community infrastructure make it the perfect home in a fast-developing
+              location.</p>
+            <p>At The Golden Residences, we believe every family deserves a home that reflects their aspirations. The
+              exclusive clubhouse and integrated commercial zones ensure that everything you need — from leisure to
+              lifestyle — is always within reach.</p>
+            <div class="hero-btns">
+              <a href="#final-cta" class="btn btn-gold" id="hero-visit">
+                <i class="fas fa-calendar-check"></i> Book a Free Site Visit
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     KEY FEATURES
+============================================================ -->
+  <section id="features">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Features</span>
+        <h2 class="section-title">Every Detail. <span>Perfected.</span></h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="row g-4 mt-3">
+        <div class="col-12 col-md-6 col-xl-4">
+          <div class="feature-item reveal h-100">
+            <div class="feature-icon-box"><i class="fas fa-check-double"></i></div>
+            <div>
+              <h4>RERA Approved Project</h4>
+              <p>Fully RERA registered — your investment is 100% legally protected and compliant with all regulations.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <div class="feature-item reveal h-100">
+            <div class="feature-icon-box"><i class="fas fa-layer-group"></i></div>
+            <div>
+              <h4>Private Terrace or Basement</h4>
+              <p>Every independent floor offers an exclusive private terrace or basement — your personal extended living
+                space.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <div class="feature-item reveal h-100">
+            <div class="feature-icon-box"><i class="fas fa-home"></i></div>
+            <div>
+              <h4>Fully Furnished Interiors</h4>
+              <p>Move-in ready homes with modern elevation, premium interiors, and fully furnished living spaces
+                included.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <div class="feature-item reveal h-100">
+            <div class="feature-icon-box"><i class="fas fa-shield-alt"></i></div>
+            <div>
+              <h4>24/7 Smart Security</h4>
+              <p>CCTV surveillance, boom barriers, biometric access, and a smart visitor management system for total
+                safety.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <div class="feature-item reveal h-100">
+            <div class="feature-icon-box"><i class="fas fa-wifi"></i></div>
+            <div>
+              <h4>Smart Community Tech</h4>
+              <p>App-based community management, smart meters, EV charging points and high-speed internet
+                infrastructure.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <div class="feature-item reveal h-100">
+            <div class="feature-icon-box"><i class="fas fa-store"></i></div>
+            <div>
+              <h4>Commercial Zones</h4>
+              <p>Integrated commercial zones within the campus for retail, F&B, essential services, and convenience
+                stores.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <div class="feature-item reveal h-100">
+            <div class="feature-icon-box"><i class="fas fa-water"></i></div>
+            <div>
+              <h4>24/7 Water &amp; Power</h4>
+              <p>Uninterrupted water supply with RO connections and 100% DG power backup for all residences.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <div class="feature-item reveal h-100">
+            <div class="feature-icon-box"><i class="fas fa-building"></i></div>
+            <div>
+              <h4>Exclusive Clubhouse</h4>
+              <p>A lifestyle clubhouse with a restaurant-café, party terrace, banquet hall, indoor games, library, and
+                guest rooms.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <div class="feature-item reveal h-100">
+            <div class="feature-icon-box"><i class="fas fa-leaf"></i></div>
+            <div>
+              <h4>Lush Green Surroundings</h4>
+              <p>Beautifully landscaped gardens, cycling & trekking tracks spread across the 172-acre township campus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     AMENITIES
+============================================================ -->
+  <section id="amenities">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Key Features</span>
+        <h2 class="section-title">Premium Living. <span>Thoughtfully Designed.</span></h2>
+        <div class="gold-line"></div>
+        <p class="section-sub">Choose premium living, modern amenities, and unmatched connectivity in a thriving
+          township.</p>
+      </div>
+      <!-- Amenity image grid -->
+      <div class="row g-2" style="margin-top:56px">
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2dot4">
+          <div class="amenity-card reveal">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80" alt="Swimming Pool" />
+            <div class="amenity-overlay"><i class="fas fa-swimming-pool"></i><span>Swimming Pool</span></div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2dot4">
+          <div class="amenity-card reveal">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80" alt="Gymnasium" />
+            <div class="amenity-overlay"><i class="fas fa-dumbbell"></i><span>Gymnasium</span></div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2dot4">
+          <div class="amenity-card reveal">
+            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&q=80" alt="Banquet Hall" />
+            <div class="amenity-overlay"><i class="fas fa-glass-cheers"></i><span>Banquet Hall</span></div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2dot4">
+          <div class="amenity-card reveal">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Sports Area" />
+            <div class="amenity-overlay"><i class="fas fa-running"></i><span>Sports Area</span></div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2dot4">
+          <div class="amenity-card reveal">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" alt="Restaurant" />
+            <div class="amenity-overlay"><i class="fas fa-utensils"></i><span>Restaurant &amp; Café</span></div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2dot4">
+          <div class="amenity-card reveal">
+            <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=600&q=80" alt="Cycling Track" />
+            <div class="amenity-overlay"><i class="fas fa-bicycle"></i><span>Cycling Track</span></div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2dot4">
+          <div class="amenity-card reveal">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Sports Area" />
+            <div class="amenity-overlay"><i class="fas fa-running"></i><span>Sports Area</span></div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2dot4">
+          <div class="amenity-card reveal">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Library" />
+            <div class="amenity-overlay"><i class="fas fa-book"></i><span>Library</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     GALLERY
+============================================================ -->
+  <section id="gallery">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Gallery</span>
+        <h2 class="section-title text-black">See It to <span>Believe It</span></h2>
+        <div class="gold-line"></div>
+        <p class="section-sub" style="margin:0 auto 48px">A glimpse into the world-class living experience at The Golden
+          Residences.</p>
+      </div>
+      <div class="gallery-uniform-grid" id="collageGrid">
+        <div class="gu-item" data-src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=1400&q=90"
+          data-caption="The Golden Residences - Exterior View">
+          <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=80" alt="Exterior View" />
+          <div class="gu-overlay"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <div class="gu-item" data-src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200&q=90"
+          data-caption="Grand Living Room">
+          <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=700&q=80" alt="Living Room" />
+          <div class="gu-overlay"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <div class="gu-item" data-src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&q=90"
+          data-caption="Master Bedroom">
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=700&q=80" alt="Master Bedroom" />
+          <div class="gu-overlay"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <div class="gu-item" data-src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=90"
+          data-caption="Premium Elevation">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=700&q=80" alt="Premium Elevation" />
+          <div class="gu-overlay"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <div class="gu-item" data-src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=90"
+          data-caption="Swimming Pool">
+          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=700&q=80" alt="Swimming Pool" />
+          <div class="gu-overlay"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <div class="gu-item" data-src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=90"
+          data-caption="Designer Kitchen">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=700&q=80" alt="Designer Kitchen" />
+          <div class="gu-overlay"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <div class="gu-item" data-src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=90"
+          data-caption="Gymnasium">
+          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=700&q=80" alt="Gymnasium" />
+          <div class="gu-overlay"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <div class="gu-item" data-src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1600&q=90"
+          data-caption="Banquet Hall">
+          <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=700&q=80" alt="Banquet Hall" />
+          <div class="gu-overlay"><i class="fas fa-expand-alt"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Custom Lightbox -->
+  <div class="lb-modal" id="lbModal">
+    <div class="lb-backdrop" id="lbBackdrop"></div>
+    <button class="lb-close" id="lbClose"><i class="fas fa-times"></i></button>
+    <div class="lb-content">
+      <div class="lb-image-container">
+        <button class="lb-nav lb-prev" id="lbPrev"><i class="fas fa-chevron-left"></i></button>
+        <img id="lbImg" src="" alt="" />
+        <button class="lb-nav lb-next" id="lbNext"><i class="fas fa-chevron-right"></i></button>
+      </div>
+      <div class="lb-footer">
+        <div class="lb-caption" id="lbCaption"></div>
+        <div class="lb-counter" id="lbCounter"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+     FLOOR PLANS
+============================================================ -->
+  <section id="floorplan">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Layout Plans</span>
+        <h2 class="section-title">Space Designed for <span>Distinguished Living</span></h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="plan-tabs">
+        <button class="plan-tab active" onclick="switchPlan(this,'plan1BHK')" id="tab-1bhk">3 BHK · 1525 Sq.Ft</button>
+        <button class="plan-tab" onclick="switchPlan(this,'plan2BHK')" id="tab-2bhk">3.5 BHK · 1980 Sq.Ft</button>
+      </div>
+      <div class="plan-panels">
+
+        <!-- 3 BHK -->
+        <div class="plan-panel active" id="plan1BHK">
+          <div class="plan-img">
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=700&q=80" alt="3 BHK Floor Plan" />
+          </div>
+          <div class="plan-details">
+            <h3>3 BHK – The Prestige Floor</h3>
+            <p>Spacious 3 BHK independent floor with a hall and kitchen. <strong style="color:var(--gold)">Top
+                floors</strong> come with a private terrace; <strong style="color:var(--gold)">lower floors</strong>
+              include a basement — perfect for families craving comfort &amp; exclusivity.</p>
+            <div class="plan-specs">
+              <div class="plan-spec">
+                <div class="val">1525</div>
+                <div class="lbl">Sq.Ft Area</div>
+              </div>
+              <div class="plan-spec">
+                <div class="val">3</div>
+                <div class="lbl">Bedrooms</div>
+              </div>
+              <div class="plan-spec">
+                <div class="val">3</div>
+                <div class="lbl">Bathrooms</div>
+              </div>
+            </div>
+            <p style="color:var(--gold);font-family:var(--font-serif);font-size:1.6rem;margin-bottom:28px">₹1.41 Cr*
+              onwards &nbsp;<small style="font-size:1rem;color:var(--text-muted)">@ ₹9,700/sq.ft</small></p>
+            <a href="#final-cta" class="btn btn-gold" id="plan-1bhk-cta"><i class="fas fa-download"></i> Download Floor
+              Plan</a>
+          </div>
+        </div>
+
+        <!-- 3.5 BHK -->
+        <div class="plan-panel" id="plan2BHK">
+          <div class="plan-img">
+            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=700&q=80" alt="3.5 BHK Floor Plan" />
+          </div>
+          <div class="plan-details">
+            <h3>3.5 BHK – The Grand Floor</h3>
+            <p>The ultimate in space and luxury. <strong style="color:var(--gold)">Top floors</strong> with a panoramic
+              private terrace; <strong style="color:var(--gold)">lower floors</strong> with a full basement — plus an
+              extra room for your study, nursery, or prayer room.</p>
+            <div class="plan-specs">
+              <div class="plan-spec">
+                <div class="val">1980</div>
+                <div class="lbl">Sq.Ft Area</div>
+              </div>
+              <div class="plan-spec">
+                <div class="val">3+1</div>
+                <div class="lbl">Bedrooms</div>
+              </div>
+              <div class="plan-spec">
+                <div class="val">3</div>
+                <div class="lbl">Bathrooms</div>
+              </div>
+            </div>
+            <p style="color:var(--gold);font-family:var(--font-serif);font-size:1.6rem;margin-bottom:28px">₹1.74 Cr*
+              onwards &nbsp;<small style="font-size:1rem;color:var(--text-muted)">@ ₹9,700/sq.ft</small></p>
+            <a href="#final-cta" class="btn btn-gold" id="plan-2bhk-cta"><i class="fas fa-download"></i> Download Floor
+              Plan</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ============================================================
+     LOCATION MAP
+============================================================ -->
+  <section id="location">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Location</span>
+        <h2 class="section-title">Connected to <span>Everything</span></h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="row g-5 mt-2">
+        <div class="col-12 col-lg-5">
+          <div class="map-embed reveal">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14040.81234567890!2d76.93200000000001!3d28.37500000000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d4720756da40b%3A0x7d4d4d4d4d4d4d4d!2sIMT%20Manesar%2C%20Gurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1713567890123!5m2!1sen!2sin"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="The Golden Residences – IMT Manesar Location Map">
+            </iframe>
+            <div class="map-embed-overlay"></div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-7">
+          <div class="landmarks reveal">
+            <h3 class="text-white">Strategic Location &amp; Connectivity</h3>
+            <div class="landmark-list">
+              <div class="landmark-item"><i class="fas fa-industry"></i><span class="lm-name">IMT Manesar Industrial
+                  Hub</span><span class="lm-dist">3 min</span></div>
+              <div class="landmark-item"><i class="fas fa-road"></i><span class="lm-name">NH-48 (Delhi–Jaipur National
+                  Highway)</span><span class="lm-dist">5 min</span></div>
+              <div class="landmark-item"><i class="fas fa-car"></i><span class="lm-name">Maruti Suzuki Manufacturing
+                  Plant</span><span class="lm-dist">5 min</span></div>
+              <div class="landmark-item"><i class="fas fa-subway"></i><span class="lm-name">Dwarka Expressway &amp;
+                  Metro Expansion</span><span class="lm-dist">Smooth access</span></div>
+              <div class="landmark-item"><i class="fas fa-plane"></i><span class="lm-name">IGI Airport, New
+                  Delhi</span><span class="lm-dist">40 min</span></div>
+              <div class="landmark-item"><i class="fas fa-shopping-bag"></i><span class="lm-name">Ambience Mall,
+                  Gurugram</span><span class="lm-dist">25 min</span></div>
+              <div class="landmark-item"><i class="fas fa-boxes"></i><span class="lm-name">Manesar Container Depot
+                  (ICD)</span><span class="lm-dist">8 min</span></div>
+              <div class="landmark-item"><i class="fas fa-city"></i><span class="lm-name">KMP Expressway &amp; Logistics
+                  Parks</span><span class="lm-dist">Nearby</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     FAQ
+============================================================ -->
+  <section id="faq">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">FAQ</span>
+        <h2 class="section-title">Questions <span>Answered</span></h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)" id="faq-q1">
+            Where are The Golden Residences located?
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>The Golden Residences is located within the Golden City township in <strong>Sector 9, IMT Manesar,
+                Gurugram</strong>. PIN code: 122052. Just 3 minutes from the IMT Manesar Industrial Hub and 5 minutes
+              from NH-48.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)" id="faq-q2">
+            Which floors are available?
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Premium <strong>3 BHK (1525 sq.ft)</strong> and <strong>3.5 BHK (1980 sq.ft)</strong> spacious
+              independent builder floors are available. Top floors come with a private terrace; lower floors include a
+              basement for dedicated storage or parking.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)" id="faq-q3">
+            Is The Golden Residences RERA certified?
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. The Golden Residences is <strong>HRERA Certified</strong> under Registration No.
+              <strong>GGM/882/614/2024/109</strong> dated 08.11.2024 — ensuring full transparency, legal compliance, and
+              timely delivery.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)" id="faq-q4">
+            What payment plans are available?
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>We offer a flexible <strong>30:70 payment plan</strong> — pay 30% now and 70% at possession. Bank loan
+              assistance is available through our tie-ups with <strong>Axis Bank</strong> and <strong>ICICI
+                Bank</strong>. Easy, beneficial payment structure to suit your budget.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)" id="faq-q5">
+            What is the price range &amp; floor plan structure?
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p><strong>In plots with a basement:</strong> The first three floors get a dedicated storage room in the
+              stilt, while the fourth floor enjoys private terrace access.<br /><br /><strong>In plots without a
+                basement:</strong> All floors are allotted exclusive terrace areas, offering open, private space for
+              every resident.<br /><br />Pricing starts at <strong>₹1.41 Cr*</strong> at <strong>₹9,700 per
+                sq.ft</strong>.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)" id="faq-q6">
+            When is the expected possession?
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Possession is expected by <strong>June 2026</strong>. The project is HRERA certified (No.
+              GGM/882/614/2024/109), ensuring legal oversight and adherence to the committed delivery timeline.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     FINAL CTA SECTION
+============================================================ -->
+  <section id="final-cta">
+    <div class="final-cta-overlay"></div>
+    <div class="container final-cta-content">
+      <div class="row g-5 align-items-start">
+        <div class="col-12 col-lg-7">
+          <div class="limited-badge">Limited Units Available</div>
+          <h2>Your Dream Home Awaits —<br /><em>Book Now &amp; Get Best Offers</em></h2>
+          <p>The Golden Residences, Sector 9, IMT Manesar — Fully furnished 3 & 3.5 BHK independent floors by Worldwide
+            Realty. Our team is ready to help you find the perfect floor.</p>
+          <a href="tel:+919876543210" class="cta-call-btn" style="text-decoration:none">
+            <i class="fas fa-phone-alt"></i>
+            <div class="cta-call-text">
+              <small>Speak to Our Luxury Expert</small>
+              <strong>+91 98765 43210</strong>
+            </div>
+          </a>
+          <a href="https://wa.me/919876543210" class="cta-call-btn" style="text-decoration:none;margin-top:10px"
+            target="_blank">
+            <i class="fab fa-whatsapp" style="color:#25d366;font-size:22px"></i>
+            <div class="cta-call-text">
+              <small>Message on WhatsApp</small>
+              <strong>+91 98765 43210</strong>
+            </div>
+          </a>
+        </div>
+        <div class="col-12 col-lg-5">
+          <div class="cta-form-box">
+            <h3>Book Your Site Visit</h3>
+            <form id="cta-form" onsubmit="handleFormSubmit(event, 'cta-form')">
+              <div class="form-group">
+                <input type="text" id="cta-name" name="name" placeholder="Your Full Name" required />
+              </div>
+              <div class="form-group">
+                <input type="tel" id="cta-phone" name="phone" placeholder="Mobile Number" pattern="[0-9]{10}"
+                  required />
+              </div>
+              <div class="form-group">
+                <input type="email" id="cta-email" name="email" placeholder="Email Address (optional)" />
+              </div>
+              <div class="form-group">
+                <select id="cta-interest" name="interest">
+                  <option value="" disabled selected>I'm interested in…</option>
+                  <option>3 BHK Floor – ₹1.41 Cr</option>
+                  <option>3.5 BHK Floor – ₹1.74 Cr</option>
+                  <option>Site Visit</option>
+                  <option>Investment Query</option>
+                  <option>Brochure Request</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <textarea id="cta-message" name="message" placeholder="Any specific requirements?" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center" id="cta-submit">
+                <i class="fas fa-calendar-check"></i> Book Site Visit – It's Free
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     FOOTER
+============================================================ -->
+  <footer>
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-12 col-md-6 col-lg-5 footer-brand">
+          <div class="site-logo">
+            The Golden Residences
+          </div>
+          <p>Premium 3 & 3.5 BHK fully furnished independent floors spread across a 172-acre township at Sector 9, IMT
+            Manesar, Gurugram. Redefining luxury living in Haryana's fastest-growing location.</p>
+          <div class="social-links mt-3">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-3 footer-col">
+          <h4>Quick Links</h4>
+          <a href="#highlights">Highlights</a>
+          <a href="#amenities">Amenities</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#floorplan">Floor Plans</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="col-12 col-md-3 col-lg-4 footer-col">
+          <h4>Contact Us</h4>
+          <a href="tel:+919876543210"><i class="fas fa-phone-alt" style="color:var(--gold);margin-right:8px"></i> +91
+            98765 43210</a>
+          <a href="mailto:info@goldenresidences.in"><i class="fas fa-envelope"
+              style="color:var(--gold);margin-right:8px"></i> info@goldenresidences.in</a>
+          <a href="#location"><i class="fas fa-map-marker-alt" style="color:var(--gold);margin-right:8px"></i> Sector 9,
+            IMT Manesar, Gurugram, Haryana</a>
+          <div class="rera-badge" style="margin-top:16px;display:inline-block">
+            RERA: GGM/882/614/2024/109 | DATED 08.11.2024
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 The Golden Residences | Worldwide Realty. All rights reserved.</p>
+        <p>*Prices subject to change. All images are for representational purposes only.</p>
+      </div>
+      <div style="margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.06)">
+        <p style="font-size:11px;color:rgba(255,255,255,0.3);line-height:1.8"><strong
+            style="color:rgba(255,255,255,0.4)">Disclaimer:</strong> This is the official website of The Golden
+          Residences, a residential project developed by Worldwide Realty. All information provided here is intended
+          solely for general informational purposes. HRERA No. GGM/882/614/2024/109 DATED 08.11.2024. Prices, plans, and
+          specifications are subject to change without prior notice. Images and renders are for representational
+          purposes only.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+     WHATSAPP FLOAT
+============================================================ -->
+  <a href="https://wa.me/919876543210?text=Hi%2C%20I'm%20interested%20in%20The%20Golden%20Residences.%20Please%20share%20details."
+    class="wa-float" target="_blank" rel="noopener" id="wa-float-btn" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-tooltip">Chat with us</span>
+  </a>
+
+
+
+  <script>
+    /* ------------------------------------------------
+       Header Scroll
+    ------------------------------------------------ */
+    const hdr = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      hdr.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    /* ------------------------------------------------
+       Hero Pan Animation on Load
+    ------------------------------------------------ */
+    window.addEventListener('load', () => {
+      document.getElementById('hero').classList.add('loaded');
+    });
+
+    /* ------------------------------------------------
+       Mobile Nav
+    ------------------------------------------------ */
+    function openMobileNav() {
+      document.getElementById('mobile-nav').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileNav() {
+      document.getElementById('mobile-nav').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    /* ------------------------------------------------
+       Floor Plan Tabs
+    ------------------------------------------------ */
+    function switchPlan(btn, panelId) {
+      document.querySelectorAll('.plan-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.plan-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(panelId).classList.add('active');
+    }
+
+    /* ------------------------------------------------
+       FAQ Accordion
+    ------------------------------------------------ */
+    function toggleFaq(el) {
+      const item = el.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    /* ------------------------------------------------
+       Scroll Reveal
+    ------------------------------------------------ */
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, (i % 4) * 100);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach(el => observer.observe(el));
+
+    /* ------------------------------------------------
+       Lightbox Config
+    ------------------------------------------------ */
+    /* ------------------------------------------------
+       Gallery Filters + Lightbox
+    ------------------------------------------------ */
+    (function () {
+      const items = document.querySelectorAll('.gu-item');
+
+      // --- Custom Lightbox ---
+      const modal = document.getElementById('lbModal');
+      const lbImg = document.getElementById('lbImg');
+      const lbCap = document.getElementById('lbCaption');
+      const lbCnt = document.getElementById('lbCounter');
+      let allItems = [], curIdx = 0;
+
+      function openLightbox(item) {
+        allItems = Array.from(document.querySelectorAll('.gu-item'));
+        curIdx = allItems.indexOf(item);
+        showImage(curIdx);
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeLightbox() {
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+        lbImg.src = '';
+      }
+      function showImage(idx) {
+        const item = allItems[idx];
+        lbImg.src = item.dataset.src;
+        lbCap.textContent = item.dataset.caption || '';
+        lbCnt.textContent = (idx + 1) + ' / ' + allItems.length;
+      }
+      function prev() { curIdx = (curIdx - 1 + allItems.length) % allItems.length; showImage(curIdx); }
+      function next() { curIdx = (curIdx + 1) % allItems.length; showImage(curIdx); }
+
+      items.forEach(item => item.addEventListener('click', () => openLightbox(item)));
+      document.getElementById('lbClose').addEventListener('click', closeLightbox);
+      document.getElementById('lbBackdrop').addEventListener('click', closeLightbox);
+      document.getElementById('lbPrev').addEventListener('click', prev);
+      document.getElementById('lbNext').addEventListener('click', next);
+      document.addEventListener('keydown', e => {
+        if (!modal.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') prev();
+        if (e.key === 'ArrowRight') next();
+      });
+    })();
+
+    /* ------------------------------------------------
+       Form Submit Handler
+    ------------------------------------------------ */
+    function handleFormSubmit(e, formId) {
+      e.preventDefault();
+      const form = document.getElementById(formId);
+      const btn = form.querySelector('button[type="submit"]');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.innerHTML = '<i class="fas fa-check-circle"></i> Request Sent!';
+        btn.style.background = 'linear-gradient(135deg,#2ecc71,#27ae60)';
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+          btn.style.background = '';
+          form.reset();
+        }, 3000);
+      }, 1500);
+    }
+
+    /* ------------------------------------------------
+       Parallax Hero
+    ------------------------------------------------ */
+    const heroBg = document.querySelector('.hero-bg');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY < window.innerHeight) {
+        heroBg.style.transform = `scale(1) translateY(${window.scrollY * 0.3}px)`;
+      }
+    }, { passive: true });
+  </script>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
