@@ -33,10 +33,31 @@
   --shadow-card: 0 4px 24px rgba(28, 26, 22, 0.12);
   --radius: 4px;
   --section-pad: 60px 0;
+  --reveal-bezier: cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(to right, var(--gold), var(--gold-light));
+  z-index: 9999;
+  transition: width 0.1s ease-out;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Offset for sticky header */
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+#cta-form {
+  scroll-margin-top: 120px; /* Extra margin for the form on mobile */
 }
 
 body {
@@ -496,13 +517,13 @@ nav a:hover {
 
 .hero-lead-form {
   width: 100%;
-  background: rgba(8, 6, 4, 0.88);
-  backdrop-filter: blur(24px);
-  border: 1px solid rgba(186, 143, 73, 0.3);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(32px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-top: 3px solid var(--gold);
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 32px 28px 24px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(186, 143, 73, 0.08);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 
 .form-header {
@@ -1888,11 +1909,12 @@ nav a:hover {
 }
 
 .cta-form-box {
-  background: rgba(10, 10, 10, 0.85);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(186, 143, 73, 0.3);
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(32px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
   padding: 36px 32px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
 }
 
 .cta-form-box h3 {
@@ -2250,15 +2272,28 @@ footer {
 /* ============================================================
    SCROLL ANIMATIONS
 ============================================================ */
-.reveal {
+.reveal,
+.reveal-up,
+.reveal-left,
+.reveal-right,
+.reveal-scale {
   opacity: 0;
-  transform: translateY(32px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition: opacity 1.2s var(--reveal-bezier), transform 1.2s var(--reveal-bezier);
+  will-change: transform, opacity;
 }
 
-.reveal.visible {
+.reveal, .reveal-up { transform: translateY(40px); }
+.reveal-left { transform: translateX(-40px); }
+.reveal-right { transform: translateX(40px); }
+.reveal-scale { transform: scale(0.92); }
+
+.reveal.visible,
+.reveal-up.visible,
+.reveal-left.visible,
+.reveal-right.visible,
+.reveal-scale.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(0) scale(1);
 }
 
 /* ============================================================
