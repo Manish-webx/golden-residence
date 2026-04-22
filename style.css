@@ -49,7 +49,8 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px; /* Offset for sticky header */
+  scroll-padding-top: 100px;
+  /* Offset for sticky header */
 }
 
 section {
@@ -57,7 +58,8 @@ section {
 }
 
 #cta-form {
-  scroll-margin-top: 120px; /* Extra margin for the form on mobile */
+  scroll-margin-top: 120px;
+  /* Extra margin for the form on mobile */
 }
 
 body {
@@ -354,8 +356,8 @@ nav a:hover {
   position: absolute;
   inset: 0;
   background: linear-gradient(105deg,
-      rgba(6, 4, 2, 0.92) 0%,
-      rgba(12, 10, 8, 0.78) 50%,
+      rgba(18, 16, 13, 0.55) 0%,
+      rgba(18, 16, 13, 0.55) 50%,
       rgba(18, 16, 13, 0.55) 100%);
 }
 
@@ -1003,11 +1005,60 @@ nav a:hover {
 }
 
 /* ============================================================
+   CLUB AMENITY ITEMS (Golden Residences Club Section)
+============================================================ */
+.club-amenity-item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(186, 143, 73, 0.2);
+  border-radius: 8px;
+  padding: 28px 20px;
+  text-align: center;
+  transition: var(--transition);
+  cursor: default;
+}
+
+.club-amenity-item:hover {
+  background: rgba(186, 143, 73, 0.1);
+  border-color: rgba(186, 143, 73, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(186, 143, 73, 0.2);
+}
+
+.club-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(186, 143, 73, 0.12);
+  border: 1px solid rgba(186, 143, 73, 0.35);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+  font-size: 20px;
+  color: var(--gold);
+  transition: var(--transition);
+}
+
+.club-amenity-item:hover .club-icon {
+  background: rgba(186, 143, 73, 0.25);
+  transform: scale(1.1);
+}
+
+.club-amenity-item span {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  display: block;
+}
+
+/* ============================================================
    GALLERY
 ============================================================ */
 #gallery {
   padding: var(--section-pad);
-  background: var(--white);
+  background: var(--charcoal);
 }
 
 /* Filter Buttons */
@@ -2223,14 +2274,37 @@ footer {
   transform: translateY(0);
 }
 
-.mobile-nav-overlay.open a:nth-child(3) { transition-delay: 0.2s; }
-.mobile-nav-overlay.open a:nth-child(4) { transition-delay: 0.25s; }
-.mobile-nav-overlay.open a:nth-child(5) { transition-delay: 0.3s; }
-.mobile-nav-overlay.open a:nth-child(6) { transition-delay: 0.35s; }
-.mobile-nav-overlay.open a:nth-child(7) { transition-delay: 0.4s; }
-.mobile-nav-overlay.open a:nth-child(8) { transition-delay: 0.45s; }
-.mobile-nav-overlay.open a:nth-child(9) { transition-delay: 0.5s; }
-.mobile-nav-overlay.open a:nth-child(10) { transition-delay: 0.55s; }
+.mobile-nav-overlay.open a:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.mobile-nav-overlay.open a:nth-child(4) {
+  transition-delay: 0.25s;
+}
+
+.mobile-nav-overlay.open a:nth-child(5) {
+  transition-delay: 0.3s;
+}
+
+.mobile-nav-overlay.open a:nth-child(6) {
+  transition-delay: 0.35s;
+}
+
+.mobile-nav-overlay.open a:nth-child(7) {
+  transition-delay: 0.4s;
+}
+
+.mobile-nav-overlay.open a:nth-child(8) {
+  transition-delay: 0.45s;
+}
+
+.mobile-nav-overlay.open a:nth-child(9) {
+  transition-delay: 0.5s;
+}
+
+.mobile-nav-overlay.open a:nth-child(10) {
+  transition-delay: 0.55s;
+}
 
 .mobile-nav-overlay a:hover {
   color: var(--gold);
@@ -2282,10 +2356,22 @@ footer {
   will-change: transform, opacity;
 }
 
-.reveal, .reveal-up { transform: translateY(40px); }
-.reveal-left { transform: translateX(-40px); }
-.reveal-right { transform: translateX(40px); }
-.reveal-scale { transform: scale(0.92); }
+.reveal,
+.reveal-up {
+  transform: translateY(40px);
+}
+
+.reveal-left {
+  transform: translateX(-40px);
+}
+
+.reveal-right {
+  transform: translateX(40px);
+}
+
+.reveal-scale {
+  transform: scale(0.92);
+}
 
 .reveal.visible,
 .reveal-up.visible,
