@@ -1854,13 +1854,23 @@ nav a:hover {
 }
 
 .faq-list {
-  max-width: 820px;
+  max-width: 1200px;
   margin: 56px auto 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0 40px;
+}
+
+@media (min-width: 992px) {
+  .faq-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .faq-item {
   border-bottom: 1px solid rgba(186, 143, 73, 0.15);
   overflow: hidden;
+  align-self: start;
 }
 
 .faq-question {
