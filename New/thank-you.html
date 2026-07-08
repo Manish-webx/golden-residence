@@ -123,11 +123,11 @@
           <img src="img/logo-new.jpg.jpeg" alt="Indiabulls High Rise Logo" class="header-logo-img" />
         </a>
         <nav id="desktop-nav" class="d-none d-lg-flex">
-          <a href="index.html#highlights">Highlights</a>
           <a href="index.html#about">About</a>
           <a href="index.html#amenities">Amenities</a>
-          <a href="index.html#gallery">Gallery</a>
+          <a href="index.html#gallery">Club and Spa</a>
           <a href="index.html#floorplan">Floor Plans</a>
+          <a href="index.html#virtual-tour">Virtual Tour</a>
         </nav>
         <div class="header-cta">
           <a href="index.html" class="btn btn-gold"><i class="fas fa-home"></i> Back to Home</a>
@@ -145,11 +145,11 @@
       <img src="img/logo-new.jpg.jpeg" alt="Indiabulls High Rise" />
     </div>
     <span class="mobile-close" onclick="closeMobileNav()"><i class="fas fa-times"></i></span>
-    <a href="index.html#highlights" onclick="closeMobileNav()">Highlights</a>
     <a href="index.html#about" onclick="closeMobileNav()">About</a>
     <a href="index.html#amenities" onclick="closeMobileNav()">Amenities</a>
-    <a href="index.html#gallery" onclick="closeMobileNav()">Gallery</a>
+    <a href="index.html#gallery" onclick="closeMobileNav()">Club and Spa</a>
     <a href="index.html#floorplan" onclick="closeMobileNav()">Floor Plans</a>
+    <a href="index.html#virtual-tour" onclick="closeMobileNav()">Virtual Tour</a>
     <a href="index.html" class="btn btn-gold" onclick="closeMobileNav()" style="margin-top:20px">Back to Home</a>
   </div>
 
@@ -184,7 +184,6 @@
         </div>
         <div class="col-6 col-md-3 col-lg-3 footer-col">
           <h4>Navigate</h4>
-          <a href="index.html#highlights">Highlights</a>
           <a href="index.html#amenities">Amenities</a>
           <a href="index.html#floorplan">Floor Plans</a>
         </div>
@@ -198,7 +197,14 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 Indiabulls High Rise. All rights reserved.</p>
+        <div class="footer-copyright">
+          <p>© 2026 Indiabulls High Rise. All rights reserved.</p>
+        </div>
+        <div class="legal-footer-links">
+          <a onclick="openLegalModal('privacy')">Privacy Policy</a>
+          <span class="legal-divider">|</span>
+          <a onclick="openLegalModal('terms')">Terms &amp; Conditions</a>
+        </div>
       </div>
     </div>
   </footer>
@@ -239,6 +245,84 @@
     function closeMobileNav() {
       document.getElementById('mobile-nav').classList.remove('open');
       document.body.style.overflow = '';
+    }
+  </script>
+
+  <!-- ============================================================
+     LEGAL (PRIVACY POLICY & TERMS) MODAL POPUP
+============================================================ -->
+  <div class="legal-modal" id="legalModal">
+    <div class="legal-modal-backdrop" onclick="closeLegalModal()"></div>
+    <div class="legal-modal-content">
+      <div class="legal-modal-header">
+        <div class="legal-tabs">
+          <button type="button" class="legal-tab-btn active" id="tabBtnPrivacy" onclick="switchLegalTab('privacy')">Privacy Policy</button>
+          <span class="legal-tabs-sep">|</span>
+          <button type="button" class="legal-tab-btn" id="tabBtnTerms" onclick="switchLegalTab('terms')">Terms &amp; Conditions</button>
+        </div>
+        <button type="button" class="legal-modal-close" onclick="closeLegalModal()" aria-label="Close Modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="legal-modal-body">
+        <div id="privacy-policy-tab-content" class="legal-tab-pane active">
+          <h4>Privacy Policy</h4>
+          <p>Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect the information you provide when you interact with our website or submit your details through Google Ads lead forms. We may update this policy from time to time without prior notice. We encourage you to review this page periodically to stay informed about any changes.</p>
+        </div>
+        <div id="terms-conditions-tab-content" class="legal-tab-pane" style="display:none;">
+          <h4>Terms &amp; Conditions</h4>
+          <p>By accessing our website or submitting your information through our Google Ads campaigns, you agree to the collection and use of your information as described in this Privacy Policy.</p>
+          <p>When you browse our website, you may not be required to provide any personal information. However, if you choose to enquire about our services, request a callback, download information, or submit a lead form through Google Ads, we may collect details such as your name, email address, phone number, city, and any other information you voluntarily provide.</p>
+          <p>The information collected is used to:</p>
+          <ul>
+            <li>Respond to your enquiries and requests.</li>
+            <li>Contact you regarding our products, services, or offers.</li>
+            <li>Provide customer support and improve your experience.</li>
+            <li>Share important updates, promotional communications, or relevant information related to your enquiry.</li>
+            <li>Improve our marketing campaigns and website performance.</li>
+          </ul>
+          <p>We do not sell, rent, or trade your personal information with third parties. Your information is used only for legitimate business purposes and may be shared with trusted service providers only when necessary to deliver our services or comply with applicable legal requirements.</p>
+          <p>We implement appropriate technical and organisational security measures to protect your personal information from unauthorised access, misuse, alteration, or disclosure. Data transmitted between your browser and our servers is protected using industry-standard encryption protocols.</p>
+          <p>Our website may use cookies and similar technologies to enhance website functionality, analyse traffic, improve user experience, and personalise content. You can choose to disable cookies through your browser settings; however, some website features may not function properly.</p>
+          <p>If you wish to access, update, or request the deletion of your personal information, or if you have any questions regarding this Privacy Policy, please contact us through the contact details available on our website.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openLegalModal(tab) {
+      const modal = document.getElementById('legalModal');
+      if (modal) {
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        switchLegalTab(tab || 'privacy');
+      }
+    }
+
+    function closeLegalModal() {
+      const modal = document.getElementById('legalModal');
+      if (modal) {
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function switchLegalTab(tab) {
+      const privacyContent = document.getElementById('privacy-policy-tab-content');
+      const termsContent = document.getElementById('terms-conditions-tab-content');
+      const privacyBtn = document.getElementById('tabBtnPrivacy');
+      const termsBtn = document.getElementById('tabBtnTerms');
+
+      if (tab === 'terms') {
+        if (privacyContent) privacyContent.style.display = 'none';
+        if (termsContent) termsContent.style.display = 'block';
+        if (privacyBtn) privacyBtn.classList.remove('active');
+        if (termsBtn) termsBtn.classList.add('active');
+      } else {
+        if (privacyContent) privacyContent.style.display = 'block';
+        if (termsContent) termsContent.style.display = 'none';
+        if (privacyBtn) privacyBtn.classList.add('active');
+        if (termsBtn) termsBtn.classList.remove('active');
+      }
     }
   </script>
 </body>
