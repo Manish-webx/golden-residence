@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Indiabulls High Rise – Fully Furnished Luxury 3 BHK & 3 BHK + Study Residences at Sector 104, Gurugram. Starting from ₹2.6 Cr. RERA Approved Project. World-Class High-Rise Living." />
+    content="Indiabulls High Rise – Semi-Furnished Luxury 3 BHK & 3 BHK + Study Residences at Sector 104, Gurugram. Starting from ₹2.6 Cr. RERA Approved Project. World-Class High-Rise Living." />
   <title>Indiabulls High Rise | Luxury 3 BHK & 3 BHK + Study – Sector 104</title>
 
   <!-- Google Fonts (Luxury Typography) -->
@@ -44,15 +44,12 @@
           <img src="img/logo-new.jpg.jpeg" alt="Indiabulls High Rise Logo" class="header-logo-img" />
         </a>
         <nav id="desktop-nav" class="d-none d-lg-flex">
+          <a href="#">Home</a>
           <a href="#calculator">Calculator</a>
           <a href="#about">About</a>
           <a href="#amenities">Amenities</a>
           <a href="#gallery">Club and Spa</a>
-          <a href="#floorplan">Floor Plans</a>
           <a href="#virtual-tour">Virtual Tour</a>
-          <a href="#matrix">Specs</a>
-          <a href="#location">Location</a>
-          <a href="#faq">FAQ</a>
         </nav>
         <div class="header-cta">
           <a href="#cta-form" class="btn btn-gold d-none d-sm-inline-flex" id="hdr-visit"><i
@@ -71,6 +68,7 @@
       <img src="img/logo-new.jpg.jpeg" alt="Indiabulls High Rise" />
     </div>
     <span class="mobile-close" onclick="closeMobileNav()"><i class="fas fa-times"></i></span>
+    <a href="#" onclick="closeMobileNav()">Home</a>
     <a href="#calculator" onclick="closeMobileNav()">Calculator</a>
     <a href="#about" onclick="closeMobileNav()">About</a>
     <a href="#amenities" onclick="closeMobileNav()">Amenities</a>
@@ -104,7 +102,7 @@
 
             <p class="hero-tagline"
               style="font-size:1.35rem;font-weight:300;letter-spacing:0.5px;color:rgba(255,255,255,0.95);line-height:1.6;">
-              Fully Furnished Luxury 3 BHK &amp; 3 BHK + study<br /><strong
+              Semi-Furnished Luxury 3 BHK &amp; 3 BHK + study<br /><strong
                 style="color:#dfb94b;font-weight:600;">Starting ₹2.6 Cr*</strong> &nbsp;·&nbsp; <span
                 style="letter-spacing:1px;text-transform:uppercase;font-size:1.1rem;color:#fff;">Sector 104</span></p>
 
@@ -384,7 +382,7 @@
         </div>
         <div class="col-6 col-md-4 col-lg-3 col-xl-2dot4">
           <div class="amenity-card reveal-scale">
-            <img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=600&q=80" alt="Cycling Track" />
+            <img src="img/GreenCurry.webp" alt="Cycling Track" />
             <div class="amenity-overlay"><i class="fas fa-bicycle"></i><span>Cycling Track</span></div>
           </div>
         </div>
@@ -483,11 +481,10 @@
         <!-- 3 BHK -->
         <div class="plan-panel active" id="plan3BHK">
           <div class="plan-img">
-            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=700&q=80"
-              alt="3 BHK Luxury Floor Plan" />
+            <img src="img/sold-out-img.webp" alt="3 BHK Luxury Floor Plan" />
           </div>
           <div class="plan-details">
-            <h3>3 BHK Fully Furnished Luxury Residence</h3>
+            <h3>3 BHK Semi-Furnished Luxury Residence</h3>
             <p>A masterfully designed 3 BHK high-rise residence featuring expansive living and dining areas, bespoke
               designer furniture, state-of-the-art modular kitchen, and wide panoramic balconies offering breathtaking
               skyline views.</p>
@@ -515,8 +512,7 @@
         <!-- 3 BHK + Study -->
         <div class="plan-panel" id="plan3BHKStudy">
           <div class="plan-img">
-            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=700&q=80"
-              alt="3 BHK + Study Grand Floor Plan" />
+            <img src="img/sold-out-img.webp" alt="3 BHK + Study Grand Floor Plan" />
           </div>
           <div class="plan-details">
             <h3>3 BHK + Study Grand Luxury Residence</h3>
@@ -552,7 +548,8 @@
   <!-- ============================================================
      VIRTUAL SAMPLE APARTMENT TOUR BANNER
 ============================================================ -->
-  <section id="virtual-tour" class="virtual-tour-section reveal" onclick="triggerVirtualTourScroll(event)"
+  <section id="virtual-tour" class="virtual-tour-section reveal"
+    onclick="openEnquiryModal('Virtual Sample Apartment Tour')"
     title="Click to schedule your VIP Virtual Sample Apartment Tour">
     <div class="virtual-tour-bg"></div>
     <div class="virtual-tour-bar">
@@ -653,12 +650,22 @@
         <p class="section-sub" style="margin:0 auto 40px;color:var(--dark-muted);">A thoughtfully designed master layout
           offering the best of space, greenery, and community living.</p>
       </div>
-      <div class="reveal" style="text-align:center;">
-        <img src="img/floor-plan.webp" alt="Indiabulls High Rise Master Layout Plan"
-          style="width:100%;border-radius:8px;box-shadow:0 12px 48px rgba(223,185,75,0.2);border:2px solid rgba(223,185,75,0.25);" />
+      <div class="reveal layout-plan-container" onclick="openEnquiryModal('Master Layout Plan')">
+        <img src="img/floor-plan.webp" alt="Indiabulls High Rise Master Layout Plan" class="layout-plan-blurred-img" />
+        <div class="layout-plan-glass-overlay">
+          <span class="glass-badge-tag"><i class="fas fa-lock"></i> Master Plan Protected</span>
+          <h4>High-Resolution Master Layout</h4>
+          <p>Click below to unlock the complete master layout plan with tower placements, green zones, and entry/exit
+            points.</p>
+          <button type="button" class="btn btn-gold glass-enquiry-cta"
+            onclick="openEnquiryModal('Master Layout Plan'); event.stopPropagation();">
+            <i class="fas fa-eye"></i> Enquire / Unlock Master Plan
+          </button>
+        </div>
       </div>
       <div style="text-align:center;margin-top:32px;">
-        <a href="#cta-form" class="btn btn-gold" id="layout-plan-cta"><i class="fas fa-download"></i> Download Layout
+        <a href="javascript:void(0)" onclick="openEnquiryModal('Master Layout Plan')" class="btn btn-gold"
+          id="layout-plan-cta"><i class="fas fa-download"></i> Download Layout
           Plan</a>
       </div>
     </div>
@@ -731,7 +738,7 @@
           </div>
           <div class="faq-answer">
             <p>Indiabulls High Rise is an iconic, ultra-luxury residential high-rise development in Sector 104, Gurugram
-              along the Dwarka Expressway. It offers world-class fully furnished 3 BHK and 3 BHK + study residences
+              along the Dwarka Expressway. It offers world-class semi-furnished 3 BHK and 3 BHK + study residences
               designed for refined urban living.</p>
           </div>
         </div>
@@ -741,13 +748,13 @@
             <i class="fas fa-plus"></i>
           </div>
           <div class="faq-answer">
-            <p>Prices start at ₹2.6 Cr* onwards for the Fully Furnished Luxury 3 BHK residences (approx. 2150 sq.ft.),
+            <p>Prices start at ₹2.6 Cr* onwards for the Semi-Furnished Luxury 3 BHK residences (approx. 2150 sq.ft.),
               and ₹3.1 Cr onwards for the 3 BHK + Study Grand residences (approx. 2650 sq.ft.).</p>
           </div>
         </div>
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)" id="faq-q3">
-            3. What does "Fully Furnished Luxury" include?
+            3. What does "Semi-Furnished Luxury" include?
             <i class="fas fa-plus"></i>
           </div>
           <div class="faq-answer">
@@ -795,7 +802,7 @@
             <i class="fas fa-plus"></i>
           </div>
           <div class="faq-answer">
-            <p>We offer two distinguished layouts: 3 BHK Fully Furnished Luxury Residences (approx. 2150 sq.ft.,
+            <p>We offer two distinguished layouts: 3 BHK Semi-Furnished Luxury Residences (approx. 2150 sq.ft.,
               starting at ₹2.6 Cr) and 3 BHK + Study Grand Luxury Residences (approx. 2650 sq.ft., starting at ₹3.1 Cr),
               designed for families seeking generous space and elegance.</p>
           </div>
@@ -836,7 +843,7 @@
         <div class="col-12 col-lg-7">
           <div class="limited-badge">Limited Units Available</div>
           <h2>Experience High-Rise Living —<br /><em>Schedule Your VIP Preview</em></h2>
-          <p>Indiabulls Sector 104 Gurgaon, Dwarka Expressway Gurugram — Fully Furnished Luxury 3 BHK &amp; 3 BHK +
+          <p>Indiabulls Sector 104 Gurgaon, Dwarka Expressway Gurugram — Semi-Furnished Luxury 3 BHK &amp; 3 BHK +
             Study residences. Our specialists are ready to assist you.</p>
           <a href="tel:+919355558585" class="cta-call-btn" style="text-decoration:none">
             <i class="fas fa-phone-alt"></i>
@@ -904,7 +911,7 @@
             style="font-family:'Playfair Display',serif;color:#dfb94b;font-size:24px;font-weight:700;">
             Indiabulls High Rise
           </div>
-          <p>Fully Furnished Luxury 3 BHK &amp; 3 BHK + Study residences at Sector 104, Gurugram along the Dwarka
+          <p>Semi-Furnished Luxury 3 BHK &amp; 3 BHK + Study residences at Sector 104, Gurugram along the Dwarka
             Expressway. Redefining ultra-luxury high-rise living.</p>
           <div class="social-links mt-3">
             <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -1215,6 +1222,61 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- ============================================================
+     ENQUIRY / FLOOR PLAN POPUP MODAL
+============================================================ -->
+  <div class="enquiry-modal" id="enquiryModal">
+    <div class="enquiry-modal-backdrop" onclick="closeEnquiryModal()"></div>
+    <div class="enquiry-modal-content">
+      <div class="enquiry-modal-header">
+        <div class="enquiry-modal-title">
+          <span class="glass-badge"><i class="fas fa-lock-open"></i> Private Layout Access</span>
+          <h3>Unlock Floor Plans &amp; Price Breakdown</h3>
+          <p id="enquiry-modal-subtitle">Enter your details below to instantly access complete high-resolution floor
+            plans and receive pricing assistance.</p>
+        </div>
+        <button type="button" class="enquiry-modal-close" onclick="closeEnquiryModal()" aria-label="Close Modal"><i
+            class="fas fa-times"></i></button>
+      </div>
+      <div class="enquiry-modal-body">
+        <form id="popup-enquiry-form" action="thank-you.html" method="POST"
+          onsubmit="handleFormSubmit(event, 'popup-enquiry-form')">
+          <div class="form-group">
+            <label for="popup-name">Full Name *</label>
+            <input type="text" id="popup-name" name="name" placeholder="Enter Your Full Name" required />
+          </div>
+          <div class="form-group">
+            <label for="popup-phone">Mobile Number *</label>
+            <input type="tel" id="popup-phone" name="phone" placeholder="10-Digit Mobile Number" pattern="[0-9]{10}"
+              required />
+          </div>
+          <div class="form-group">
+            <label for="popup-whatsapp">WhatsApp Number (Optional)</label>
+            <input type="tel" id="popup-whatsapp" name="whatsapp" placeholder="To receive layout PDFs on WhatsApp"
+              pattern="[0-9]{10}" />
+          </div>
+          <div class="form-group">
+            <label for="popup-interest">Interested Configuration *</label>
+            <select id="popup-interest" name="interest" required>
+              <option value="Virtual Sample Apartment Tour">Virtual Sample Apartment Tour</option>
+              <option value="Master Layout Plan">Master Layout Plan</option>
+              <option value="3 BHK Luxury – ₹2.6 Cr">3 BHK Luxury – ₹2.6 Cr</option>
+              <option value="3 BHK + Study – ₹3.1 Cr">3 BHK + Study – ₹3.1 Cr</option>
+              <option value="Both Layouts & Pricing">Both Layouts &amp; Pricing</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-gold enquiry-submit-btn" id="popup-submit">
+            <i class="fas fa-arrow-circle-down"></i> Unlock &amp; Download Layouts Now
+          </button>
+        </form>
+        <div class="enquiry-trust-strip">
+          <span><i class="fas fa-shield-alt"></i> 100% Privacy Guaranteed</span>
+          <span><i class="fas fa-bolt"></i> Instant PDF Delivery</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
      LEGAL (PRIVACY POLICY & TERMS) MODAL POPUP
 ============================================================ -->
   <div class="legal-modal" id="legalModal">
@@ -1274,6 +1336,33 @@
   </div>
 
   <script>
+    function openEnquiryModal(configName) {
+      const modal = document.getElementById('enquiryModal');
+      if (modal) {
+        if (configName) {
+          const select = document.getElementById('popup-interest');
+          if (select) {
+            for (let i = 0; i < select.options.length; i++) {
+              if (select.options[i].value.includes(configName) || configName.includes(select.options[i].value)) {
+                select.selectedIndex = i;
+                break;
+              }
+            }
+          }
+        }
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeEnquiryModal() {
+      const modal = document.getElementById('enquiryModal');
+      if (modal) {
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+
     function openLegalModal(tab) {
       const modal = document.getElementById('legalModal');
       if (modal) {
@@ -1312,22 +1401,7 @@
 
     function triggerVirtualTourScroll(e) {
       if (e && e.preventDefault) e.preventDefault();
-      const formSection = document.getElementById('final-cta') || document.getElementById('cta-form');
-      const interestSelect = document.getElementById('cta-interest');
-      const messageBox = document.getElementById('cta-message');
-      if (interestSelect) {
-        interestSelect.value = 'VIP Site Visit Request';
-      }
-      if (messageBox && (!messageBox.value || messageBox.value.trim() === '')) {
-        messageBox.value = 'I would like to experience the Virtual Sample Apartment Tour for Indiabulls Sector 104.';
-      }
-      if (formSection) {
-        formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        setTimeout(() => {
-          const nameInput = document.getElementById('cta-name');
-          if (nameInput) nameInput.focus();
-        }, 850);
-      }
+      openEnquiryModal('Virtual Sample Apartment Tour');
     }
   </script>
 
