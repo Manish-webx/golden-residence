@@ -324,6 +324,34 @@ img {
     padding: 20px;
 }
 
+.preloader-logo-box {
+    margin: 0 auto 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preloader-logo-img {
+    height: 75px;
+    width: auto;
+    max-width: 280px;
+    object-fit: contain;
+    mix-blend-mode: lighten;
+    filter: drop-shadow(0 0 20px var(--gold-glow));
+    animation: pulseGlowImg 2s infinite ease-in-out;
+}
+
+@keyframes pulseGlowImg {
+    0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 15px var(--gold-glow));
+    }
+    50% {
+        transform: scale(1.05);
+        filter: drop-shadow(0 0 32px rgba(212, 175, 55, 0.65));
+    }
+}
+
 .preloader-emblem {
     font-family: var(--font-heading);
     font-size: 3.5rem;
@@ -538,6 +566,29 @@ img {
     display: flex;
     align-items: center;
     gap: 12px;
+}
+
+.brand-logo-img {
+    height: 48px;
+    width: auto;
+    max-width: 175px;
+    object-fit: contain;
+    mix-blend-mode: lighten;
+    display: block;
+    flex-shrink: 0;
+    transition: var(--transition-fast);
+}
+
+.brand-logo:hover .brand-logo-img {
+    transform: scale(1.04);
+    filter: drop-shadow(0 0 10px var(--gold-glow));
+}
+
+@media (max-width: 768px) {
+    .brand-logo-img {
+        height: 38px;
+        max-width: 140px;
+    }
 }
 
 .brand-emblem {
