@@ -23,6 +23,9 @@
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css">
 
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/jpeg" href="img/logo-new.jpg.jpeg" />
+  <link rel="shortcut icon" type="image/jpeg" href="img/logo-new.jpg.jpeg" />
+  <link rel="apple-touch-icon" href="img/logo-new.jpg.jpeg" />
   <style>
     .thank-you-hero {
       min-height: 100vh;
@@ -216,6 +219,7 @@
 
   <script>
     const lenis = new Lenis();
+    window.lenis = lenis;
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -241,21 +245,23 @@
 
     // Mobile nav
     function openMobileNav() {
+      if (typeof lenis !== 'undefined' && lenis) { lenis.stop(); } else if (window.lenis) { window.lenis.stop(); }
       document.getElementById('mobile-nav').classList.add('open');
       document.body.style.overflow = 'hidden';
     }
     function closeMobileNav() {
       document.getElementById('mobile-nav').classList.remove('open');
       document.body.style.overflow = '';
+      if (typeof lenis !== 'undefined' && lenis) { lenis.start(); } else if (window.lenis) { window.lenis.start(); }
     }
   </script>
 
   <!-- ============================================================
      LEGAL (PRIVACY POLICY & TERMS) MODAL POPUP
 ============================================================ -->
-  <div class="legal-modal" id="legalModal">
+  <div class="legal-modal" id="legalModal" data-lenis-prevent="true">
     <div class="legal-modal-backdrop" onclick="closeLegalModal()"></div>
-    <div class="legal-modal-content">
+    <div class="legal-modal-content" data-lenis-prevent="true">
       <div class="legal-modal-header">
         <div class="legal-tabs">
           <button type="button" class="legal-tab-btn active" id="tabBtnPrivacy" onclick="switchLegalTab('privacy')">Privacy Policy</button>
@@ -264,7 +270,7 @@
         </div>
         <button type="button" class="legal-modal-close" onclick="closeLegalModal()" aria-label="Close Modal"><i class="fas fa-times"></i></button>
       </div>
-      <div class="legal-modal-body">
+      <div class="legal-modal-body" data-lenis-prevent="true">
         <div id="privacy-policy-tab-content" class="legal-tab-pane active">
           <h4>Privacy Policy</h4>
           <p>Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect the information you provide when you interact with our website or submit your details through Google Ads lead forms. We may update this policy from time to time without prior notice. We encourage you to review this page periodically to stay informed about any changes.</p>
@@ -294,6 +300,7 @@
     function openLegalModal(tab) {
       const modal = document.getElementById('legalModal');
       if (modal) {
+        if (typeof lenis !== 'undefined' && lenis) { lenis.stop(); } else if (window.lenis) { window.lenis.stop(); }
         modal.classList.add('open');
         document.body.style.overflow = 'hidden';
         switchLegalTab(tab || 'privacy');
@@ -305,6 +312,7 @@
       if (modal) {
         modal.classList.remove('open');
         document.body.style.overflow = '';
+        if (typeof lenis !== 'undefined' && lenis) { lenis.start(); } else if (window.lenis) { window.lenis.start(); }
       }
     }
 

@@ -2381,6 +2381,99 @@ nav a:hover {
 }
 
 /* ============================================================
+   STICKY ENQUIRE NOW BUTTON (RIGHT SIDE)
+============================================================ */
+@keyframes pulse-sticky-btn {
+  0%, 100% {
+    box-shadow: -4px 0 25px rgba(223, 185, 75, 0.45);
+  }
+  50% {
+    box-shadow: -4px 0 38px rgba(223, 185, 75, 0.85), -1px 0 12px rgba(255, 255, 255, 0.6);
+  }
+}
+
+.sticky-enquire-btn {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9990;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color: var(--charcoal);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-right: none;
+  border-radius: 12px 0 0 12px;
+  padding: 18px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  box-shadow: -4px 0 25px rgba(223, 185, 75, 0.45);
+  transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  outline: none;
+  animation: pulse-sticky-btn 3s infinite ease-in-out;
+}
+
+.sticky-enquire-btn:hover {
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+  padding-left: 18px;
+  box-shadow: -6px 0 35px rgba(223, 185, 75, 0.7);
+  animation: none;
+}
+
+.sticky-enquire-btn:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+.sticky-enquire-btn .enquire-icon {
+  font-size: 20px;
+  color: var(--charcoal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.sticky-enquire-btn:hover .enquire-icon {
+  transform: scale(1.15) rotate(-12deg);
+}
+
+.sticky-enquire-btn .enquire-text {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .sticky-enquire-btn {
+    padding: 14px 8px;
+    gap: 8px;
+    border-radius: 8px 0 0 8px;
+  }
+
+  .sticky-enquire-btn:hover {
+    padding-left: 12px;
+  }
+
+  .sticky-enquire-btn .enquire-icon {
+    font-size: 16px;
+  }
+
+  .sticky-enquire-btn .enquire-text {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+}
+
+/* ============================================================
    FOOTER
 ============================================================ */
 footer {
@@ -2496,11 +2589,14 @@ footer {
   align-items: center;
   justify-content: flex-start;
   padding-top: 100px;
+  padding-bottom: 50px;
   gap: 20px;
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .mobile-nav-overlay.open {
@@ -3526,12 +3622,15 @@ footer {
   inset: 0;
   z-index: 10000;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  padding: 20px;
+  padding: 30px 16px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 
 .enquiry-modal.open {
@@ -3540,7 +3639,7 @@ footer {
 }
 
 .enquiry-modal-backdrop {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background: rgba(10, 8, 6, 0.85);
   backdrop-filter: blur(16px);
@@ -3557,7 +3656,8 @@ footer {
   border-radius: 20px;
   width: 100%;
   max-width: 520px;
-  max-height: 90vh;
+  margin: auto;
+  max-height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
   box-shadow: 0 35px 110px rgba(0, 0, 0, 0.95), 0 0 50px rgba(223, 185, 75, 0.12);
@@ -3565,7 +3665,7 @@ footer {
   opacity: 0;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
   color: rgba(255, 255, 255, 0.9);
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 .enquiry-modal.open .enquiry-modal-content {
@@ -3577,8 +3677,10 @@ footer {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 28px 28px 18px;
+  padding: 24px 28px 16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(21, 19, 16, 0.98);
+  flex-shrink: 0;
 }
 
 .enquiry-modal-title {
@@ -3640,6 +3742,27 @@ footer {
 
 .enquiry-modal-body {
   padding: 24px 28px 28px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+.enquiry-modal-body::-webkit-scrollbar,
+.enquiry-modal::-webkit-scrollbar {
+  width: 6px;
+}
+.enquiry-modal-body::-webkit-scrollbar-track,
+.enquiry-modal::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+}
+.enquiry-modal-body::-webkit-scrollbar-thumb,
+.enquiry-modal::-webkit-scrollbar-thumb {
+  background: rgba(223, 185, 75, 0.4);
+  border-radius: 4px;
+}
+.enquiry-modal-body::-webkit-scrollbar-thumb:hover,
+.enquiry-modal::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
 }
 
 .enquiry-modal-body .form-group {
@@ -3725,12 +3848,15 @@ footer {
   inset: 0;
   z-index: 10000;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  padding: 20px;
+  padding: 30px 16px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 
 .legal-modal.open {
@@ -3739,7 +3865,7 @@ footer {
 }
 
 .legal-modal-backdrop {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background: rgba(10, 8, 6, 0.88);
   backdrop-filter: blur(12px);
@@ -3753,7 +3879,8 @@ footer {
   border-radius: 16px;
   width: 100%;
   max-width: 800px;
-  max-height: 85vh;
+  margin: auto;
+  max-height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
   box-shadow: 0 30px 100px rgba(0, 0, 0, 0.95), 0 0 40px rgba(223, 185, 75, 0.08);
@@ -3770,6 +3897,8 @@ footer {
 .legal-modal-header {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
+  background: #151310;
   justify-content: space-between;
   padding: 18px 28px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -3837,6 +3966,8 @@ footer {
 .legal-modal-body {
   padding: 32px 36px;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
   font-size: 0.95rem;
   line-height: 1.8;
 }
