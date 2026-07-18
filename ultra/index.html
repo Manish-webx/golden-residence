@@ -48,18 +48,18 @@
 
             </a>
             <nav class="nav-links" id="nav-links">
+                <a href="#overview" class="nav-item">Specification</a>
                 <a href="#highlights" class="nav-item">Highlights</a>
                 <a href="#gallery" class="nav-item">Gallery</a>
+                <a href="#price-list" class="nav-item">Price List</a>
                 <a href="#amenities" class="nav-item">Amenities</a>
-                <a href="#location" class="nav-item">Location</a>
+                <a href="#medical" class="nav-item">Medical Safety</a>
+                <a href="#location" class="nav-item">Location Advantage</a>
                 <a href="#floor-plan" class="nav-item">Floor Plans</a>
+                <a href="#project-video" class="nav-item">Project Video</a>
             </nav>
             <div class="nav-actions">
-                <button onclick="openEnquireModal('Header Inquiry', '4 BHK (~4,200 Sq.Ft.)', '₹12 Cr* Onwards')"
-                    class="btn btn-gold magnetic-btn">
-                    <span>Enquire Now</span>
-                    <i class="fa-solid fa-gem"></i>
-                </button>
+
                 <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
                     <span></span>
                     <span></span>
@@ -610,7 +610,7 @@
             </div>
 
             <!-- TIER 2: GERONTOLOGICAL & MEDICAL CARE INFRASTRUCTURE -->
-            <div class="medical-care-header reveal-on-scroll mt-5">
+            <div class="medical-care-header reveal-on-scroll mt-5" id="medical">
                 <div class="medical-header-line"></div>
                 <div class="medical-header-text">ON-SITE MEDICAL & SAFETY INFRASTRUCTURE</div>
                 <div class="medical-header-line"></div>
@@ -919,50 +919,12 @@
                         </div>
 
                         <div class="input-group">
-                            <label for="inputEmail"><span class="gold-bullet"></span> Email Address *</label>
-                            <div class="input-wrapper">
-                                <span class="input-icon"><i class="fa-regular fa-envelope"></i></span>
-                                <input type="email" id="inputEmail" name="email" class="form-control"
-                                    placeholder="yourname@domain.com" required>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-grid">
-                        <div class="input-group">
                             <label for="inputPhone"><span class="gold-bullet"></span> Mobile Number *</label>
                             <div class="input-wrapper">
                                 <span class="input-icon"><i class="fa-solid fa-phone-volume"></i></span>
                                 <input type="tel" id="inputPhone" name="phone" class="form-control"
                                     placeholder="+91 9899... / +44 / +1" required>
                             </div>
-                        </div>
-
-                        <div class="input-group">
-                            <label for="selectInterest"><span class="gold-bullet"></span> Inquiry Subject *</label>
-                            <div class="input-wrapper">
-                                <span class="input-icon"><i class="fa-solid fa-gem"></i></span>
-                                <select id="selectInterest" name="subject" class="form-control select-dark" required>
-                                    <option value="" disabled selected>Select Subject</option>
-                                    <option value="4 BHK Senior Living Suite (~4,200 Sq.Ft. | ₹12 Cr*)">4 BHK Senior
-                                        Living Suite (~4,200 Sq.Ft. | ₹12 Cr*)</option>
-                                    <option value="Request Floor Plans & Master Brochure">Request Floor Plans & Master
-                                        Brochure</option>
-                                    <option value="Schedule Private Site Visit & Chauffeur Transfer">Schedule Private
-                                        Site Visit & Chauffeur Transfer</option>
-                                    <option value="Medical & Assisted Care Infrastructure Inquiry">Medical & Assisted
-                                        Care Infrastructure Inquiry</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="inputMessage"><span class="gold-bullet"></span> Optional Message</label>
-                        <div class="input-wrapper textarea-wrapper">
-                            <span class="input-icon textarea-icon"><i class="fa-regular fa-message"></i></span>
-                            <textarea id="inputMessage" name="message" rows="2" class="form-control"
-                                placeholder="Preferred time to connect or specific requirements..."></textarea>
                         </div>
                     </div>
 
@@ -978,7 +940,7 @@
                     <div class="form-submit text-center">
                         <button type="submit" class="btn btn-gold-filled magnetic-btn" id="mainSubmitBtn"
                             style="padding: 13px 34px;">
-                            <span>Submit Enquiry & Request Dossier</span>
+                            <span>Submit Enquiry</span>
                             <i class="fa-solid fa-lock"></i>
                         </button>
                     </div>
@@ -1091,8 +1053,7 @@
             <div class="footer-disclaimer-box">
                 <div class="disclaimer-title">
                     <i class="fa-solid fa-circle-info gold-icon"></i>
-                    <strong>PROPZILLA INFRATECH PRIVATE LIMITED (Marketed By - Authorised Channel Partner) | Haryana
-                        RERA Regd No. - GGM/128/2017/IR/177/EXT1/2022/8</strong>
+                    <strong>RVS COMING KEYS PVT LTD</strong>
                 </div>
                 <p class="disclaimer-text mt-2">
                     Disclaimer : This is not the official website of the developer & property; it belongs to an
@@ -1177,14 +1138,7 @@
                             placeholder="Mr. / Ms. / Dr. / Adv." required pattern="[a-zA-Z\s\-]+">
                     </div>
                 </div>
-                <div class="input-group">
-                    <label for="modalEmail" class="dark-label"><span class="gold-bullet"></span> Email Address *</label>
-                    <div class="input-wrapper dark-wrapper">
-                        <span class="input-icon"><i class="fa-regular fa-envelope"></i></span>
-                        <input type="email" id="modalEmail" class="form-control dark-input"
-                            placeholder="yourname@domain.com" required>
-                    </div>
-                </div>
+
                 <div class="input-group">
                     <label for="modalPhone" class="dark-label"><span class="gold-bullet"></span> Mobile Number *</label>
                     <div class="input-wrapper dark-wrapper">
